@@ -12,6 +12,7 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
+  padding: 0;
 }
 body {
   /* 3. Add accessible line-height */
@@ -48,6 +49,164 @@ h1, h2, h3, h4, h5, h6 {
 
 /** Your CSS Below **/
 
-/** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+body {
+  font-family: var(--fs-base);
+  background: var(--clr-paleBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--clr-white);
+  border-radius: 20px 20px 20px 20px;
+  padding: 0px;
+  overflow: hidden;
+  max-width: 400px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-width: 600px;
+  }
+}
+
+.result {
+  text-align: center;
+  background: linear-gradient(var(--gra-lightSlateBlue), var(--gra-lightRoyalBlue));
+  border-radius: 20px 20px 20px 20px;
+  padding: 60px;
+  color: var(--clr-white);
+}
+
+.result h2 {
+  font-size: 16px;
+  text-align: center;
+  color: var(--clr-lightLavender);
+}
+
+.score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 60%;
+  background: radial-gradient(circle, rgb(67, 12, 216) 0%, rgba(1, 0, 13, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  box-shadow: 0 8px 16px rgba(0, 90, 0, 0.125);
+}
+
+.score {
+  font-size: 50px;
+  font-weight: var(--fw-black);
+  margin: 0;
+}
+
+.of-100 {
+  font-size: 14px;
+  color: var(--clr-lightLavender);
+  }
+
+.description {
+  font-size: 12px;
+  color: var(--clr-lightLavender);
+  }
+
+.summary {
+  padding: 20px;
+  width: 100%;
+  font-size: 12px;
+  color: var(--clr-darkGrayBlue);
+
+}
+
+#summary-list {
+  list-style: none;
+  padding: 0px;
+}
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+  background-color: var(--clr-white);
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.summary-item .category {
+  flex: 1;
+  text-align: left;
+}
+
+.summary-item img {
+  margin-right: 10px;
+}
+
+
+.reaction { background-color: hsl(0, 100%, 98%); color: hsl(0, 100%, 67%); }
+.memory { background-color: hsl(39, 100%, 96%); color: hsl(39, 100%, 56%); }
+.verbal { background-color: hsl(166, 100%, 97%); color: hsl(166, 100%, 40%); }
+.visual { background-color: hsl(234, 85%, 96%); color: hsl(234, 85%, 45%); }
+
+
+.summary-item .score {
+  min-width: 70px;
+  text-align: right;
+  font-size: 14px;
+}
+
+  .summary-item .score .main-score {
+    font-weight: bold;
+    color: var(--clr-darkGrayBlue);
+  }
+  
+  .summary-item .score .sub-score {
+    color: var(--clr-lightLavender);
+  }
+  
+ .continue-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: var(--clr-darkGrayBlue);
+  color: var(--clr-white);
+  font-size: var(--font-paragraph);
+  font-weight: var(--fw-bold);
+  border-radius: 700px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.continue-btn:hover {
+  background: var(--gra-lightRoyalBlue);
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--clr-white);
+  color: var(--clr-darkGrayBlue);
+  position: fixed;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .footer {
+  margin-top: 0px;
+  }
+}
